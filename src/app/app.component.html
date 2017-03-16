@@ -1,3 +1,19 @@
-<h1>
-  {{title}}
-</h1>
+<header>
+  <h1>
+    {{title}}
+  </h1>
+
+  <nav>
+    <ul>
+      <li><a routerLink="/home">Home</a></li>
+      <li><a routerLink="/about">About</a></li>
+      <li><a routerLink="/quotes">Quotes</a></li>
+      <li><a routerLink="/contacts">Contacts</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<router-outlet></router-outlet>
+
+<footer>Made with a broke a$$ Lenovo at IronHack</footer>

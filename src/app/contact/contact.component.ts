@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -7,11 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
   contactId: string;
-  constructor(private myRoutes: ActivatedRoute) { }
+
+  constructor(private myRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    this.myRooute.params.subscribe((params) => this.contactId = Number(params['id']));
-    })
+    this.myRoute.params.subscribe((paramsResult) => {
+    this.contactId = paramsResult['id'];
+  });
   }
 
 }

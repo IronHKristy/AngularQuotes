@@ -13,18 +13,23 @@ import { ContactListComponent } from './contact-list/contact-list.component';
 import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
-  // http://localhost:4200/quotes
-  {path: 'quotes', component: QuoteListComponent },
+    // http://localhost:4200/quotes
+  { path: 'quotes', component: QuoteListComponent },
 
-  {path: 'home', component: MyHomeComponent },
+    // http://localhost:4200/home
+  { path: 'home', component: MyHomeComponent },
 
-  {path: 'about', component: MyAboutComponent },
+    // http://localhost:4200/about
+  { path: 'about', component: MyAboutComponent },
 
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
+    // http://localhost:4200
+    //   |
+    //   --->  http://localhost:4200/home
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
 
-  {path: 'contacts', component: ContactListComponent },
+  { path: 'contacts', component: ContactListComponent },
 
-  {path: 'contacts/:id', component: ContactComponent }
+  { path: 'contact/:id', component: ContactComponent }
 ];
 
 @NgModule({

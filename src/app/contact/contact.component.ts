@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-
-  constructor() { }
+  contactId: string;
+  constructor(private myRoutes: ActivatedRoute) { }
 
   ngOnInit() {
+    this.myRooute.params.subscribe((params) => this.contactId = Number(params['id']));
+    })
   }
 
 }
